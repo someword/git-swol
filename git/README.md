@@ -10,6 +10,7 @@ Here we will cover a list of the basic skills you will need and some exercises.
         insteadOf = https://github.com/
 
 `
+
   * git commit - when creating a message for your commit try to make it meaningful.   If you use a ticket system consider prexing your commit message with the ticket number.  A good commit message is a bit of an art form.  Not too verbose and not too short.  Some tips to take into consideration https://chris.beams.io/posts/git-commit/ but are not required to know.
   * git fetch and pull - what is the difference between the two and when would you use one vs the other.
   * git checkout - In git you can `checkout` any hash, branch, tag and probably other things.  Find a repo and do a `git log` on the repo and then `git checkout <HASH of commit>`.  Now use `git checkout -b` to create a feature branch and make a commit.  Switch back and forth between your branch and the master branch.
@@ -25,6 +26,6 @@ Here we will cover a list of the basic skills you will need and some exercises.
   * cherrypick - while on the squash branch cherry pick the 2nd commit from the master branch onto the squash branch.
 
 # References
-https://git-scm.com/book/en/v2
-https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd
-https://blog.cpanel.com/git-version-control-series-git-problems-and-how-to-fix-them/
+  * https://git-scm.com/book/en/v2
+  * https://www.codementor.io/citizen428/git-tutorial-10-common-git-problems-and-how-to-fix-them-aajv0katd
+  * https://blog.cpanel.com/git-version-control-series-git-problems-and-how-to-fix-them/
