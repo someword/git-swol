@@ -5,10 +5,10 @@ Here we will cover a list of the basic skills you will need and some exercises.
 
   * git clone - find some repos on github or gitlab and clone them.   You should be able to clone repos using https or ssh (eg: https://github.com/someword/git-swol.git or git@github.com:someword/git-swol.git).  You might find it handy to add the following to your .gitconfig file to change the URL you are going to clone.  This will ensure when cloning private repos you use your ssh key so you can get authorized to clone the repo.
 
-`
+```
 [url "git@github.com:"]
         insteadOf = https://github.com/
-`
+```
 
   * git commit - when creating a message for your commit try to make it meaningful.   If you use a ticket system consider prexing your commit message with the ticket number.  A good commit message is a bit of an art form.  Not too verbose and not too short.  Some tips to take into consideration https://chris.beams.io/posts/git-commit/ but are not required to know.
   * git fetch and pull - what is the difference between the two and when would you use one vs the other.
