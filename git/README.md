@@ -8,7 +8,6 @@ Here we will cover a list of the basic skills you will need and some exercises.
 `
 [url "git@github.com:"]
         insteadOf = https://github.com/
-
 `
 
   * git commit - when creating a message for your commit try to make it meaningful.   If you use a ticket system consider prexing your commit message with the ticket number.  A good commit message is a bit of an art form.  Not too verbose and not too short.  Some tips to take into consideration https://chris.beams.io/posts/git-commit/ but are not required to know.
