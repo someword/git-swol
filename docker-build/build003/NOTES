@@ -1,0 +1,32 @@
+❯ docker build -t golang .
+Sending build context to Docker daemon  3.072kB
+Step 1/7 : FROM golang:alpine AS builder
+ ---> 821acdc20eb8
+Step 2/7 : WORKDIR $GOPATH/src/some/thing
+ ---> Running in 9a0a220a00a1
+Removing intermediate container 9a0a220a00a1
+ ---> 57288cb244e0
+Step 3/7 : COPY main.go $GOPATH/src/some/thing/main.go
+ ---> caa92fc70c19
+Step 4/7 : RUN go build -o /go/bin/blazers
+ ---> Running in 371664a1733c
+Removing intermediate container 371664a1733c
+ ---> 8db6c52b1f74
+Step 5/7 : FROM scratch
+ --->
+Step 6/7 : COPY --from=builder /go/bin/blazers /go/bin/blazers
+ ---> 7fd05bc016e1
+Step 7/7 : ENTRYPOINT ["/go/bin/blazers"]
+ ---> Running in 76b8ddb8bf3d
+Removing intermediate container 76b8ddb8bf3d
+ ---> 4363a6caa271
+Successfully built 4363a6caa271
+Successfully tagged golang:latest
+
+~/src/git-swol/docker-build/build003 master* 6s
+❯ docker images |grep golang
+golang                                                                                      latest              4363a6caa271        14 seconds ago      2MB
+
+~/src/git-swol/docker-build/build003 master*
+❯ docker run golang
+Go blazers!
