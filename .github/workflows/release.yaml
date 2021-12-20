@@ -1,0 +1,22 @@
+name: Publish Release to Registry
+on:
+  release:
+    types: [published]
+jobs:
+  update-release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Get release version
+      run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:10})" >> $GITHUB_ENV
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    - name: CrowdStrike Container Image Scan
+      uses: crowdstrike/container-image-scan-action@v0.5
+      with:
+        falcon_client_id: aldsjflk
+        container_repository: ialkdjflkaj
+        container_tag: "blahbljakjjjj"
+        retry_count: 25
+      env:
+        FALCON_CLIENT_SECRET: "ialkdjsflkj"
